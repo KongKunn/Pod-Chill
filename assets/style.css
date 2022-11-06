@@ -6,7 +6,7 @@ body {
 }
 .container {
   position: absolute;
-  width: 1000px;
+  width: 900px;
   height: 600px;
   top: 40%;
   left: 45%;
@@ -129,19 +129,14 @@ body {
   list-style: none;
   padding: 5px;
 }
-.content .left .more li.Chuoi {
-  background: linear-gradient(to right, #2e97c7, #315ff7);
-  border-radius: 15px;
-  width: 150px;
-  text-align: center;
-  justify-content: center;
-}
+
 .content .left .price {
   position: absolute;
   font-size: 40px;
   font-weight: bold;
   width: 300px;
   top: 300px;
+  display: none;
 }
 #slide .item:nth-child(0) .image {
   opacity: 0;
@@ -154,10 +149,47 @@ body {
 #slide .item:nth-child(1) {
   z-index: 3;
 }
+#slide .item:nth-child(0) .content .left .more ul li:nth-child(1) {
+  opacity: 0;
+}
 #slide .item:nth-child(0) .content .left h2 {
   opacity: 0;
   transform: scale(0) translate(-100px);
 }
 #slide .item:nth-child(1) .content .left h2 {
   opacity: 1;
+}
+#slide .item:nth-child(0) .content .left .price {
+  display: none;
+}
+#slide .item:nth-child(1) .content .left .price {
+  display: block;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 450px;
+  }
+  .header img {
+    margin-left: 10px;
+    width: 50px;
+  }
+  .header h1 {
+    font-size: 30px;
+  }
+  .content .left h2 {
+    position: absolute;
+    margin-left: -40px;
+  }
+  #slide .item .image img {
+    width: 180px;
+    top: 80px;
+    justify-content: center;
+  }
+  .content .left .more {
+    margin-top: 260px;
+    width: 280px;
+    height: 100px;
+    display: inline-flex;
+  }
 }
