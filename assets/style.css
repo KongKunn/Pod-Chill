@@ -123,11 +123,15 @@ body {
 }
 .content .left .more p {
   position: relative;
-  left: 15px;
+  /* left: 15px; */
 }
 .content .left .more ul li {
   list-style: none;
   padding: 5px;
+  align-items: center;
+}
+.item .content .left .more ul li:nth-child(4) {
+  display: none;
 }
 
 .content .left .price {
